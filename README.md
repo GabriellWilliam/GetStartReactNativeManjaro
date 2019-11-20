@@ -1,7 +1,8 @@
 # GetStartReactNativeManjaro
  Automatic Installation React Native ArchLinux/Manjaro
+ Instalação Automatica do React Native Para ArchLinux/Manjo
  
-Install the Android SDK
+# Install the Android SDK
 
 Android Studio installs the latest Android SDK by default. Building a React Native app with native code, however, requires the Android 9 (Pie) SDK in particular. Additional Android SDKs can be installed through the SDK Manager in Android Studio.
 
@@ -29,10 +30,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 Type source $HOME/.bash_profile to load the config into your current shell. Verify that ANDROID_HOME has been added to your path by running echo $PATH.
 
 
-
-Instalação Automatica do React Native Para ArchLinux/Manjo
- 
-Instalando o SDK Android
+# Instalando o SDK Android
 
 Acesse https://developer.android.com/studio/#downloads, na opção "Command line tools only" baixe a SDK referente ao seu sistema operacional. Após feito o Download, extraia o conteúdo do pacote para a pasta criada no passo anterior. Com esse endereço precisamos configurar algumas variáveis ambiente em nosso sistema, procure pelo primeiro dos seguintes arquivos existentes no seu sistema: ~/.bash_profile, ~/.profile, ~/.zshrc ou ~/.bashrc, e adicione essas três linhas no arquivo (de preferência no início):
 
