@@ -45,3 +45,13 @@ then
     exit 1
 fi
 echo "Configuração finalizada"
+
+echo "Configuração do Android Studio"
+echo 'export ANDROID_HOME=$HOME/Android/Sdk
+    export PATH=$PATH:$ANDROID_HOME/emulator
+    export PATH=$PATH:$ANDROID_HOME/tools
+    export PATH=$PATH:$ANDROID_HOME/tools/bin
+    export PATH=$PATH:$ANDROID_HOME/platform-tools' >> ~/.bashrc
+
+! source $HOME/.bashrc
+echo "Configuração feita com sucesso"
