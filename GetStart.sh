@@ -44,14 +44,25 @@ then
     echo "Não foi possível configurar o React Native"
     exit 1
 fi
-echo "Configuração finalizada"
+echo "Configuração feita com sucesso"
 
 echo "Configuração do Android Studio"
-echo 'export ANDROID_HOME=$HOME/Android/Sdk
+if ! echo 'export ANDROID_HOME=$HOME/Android/Sdk
     export PATH=$PATH:$ANDROID_HOME/emulator
     export PATH=$PATH:$ANDROID_HOME/tools
     export PATH=$PATH:$ANDROID_HOME/tools/bin
     export PATH=$PATH:$ANDROID_HOME/platform-tools' >> ~/.bashrc
 
 ! source $HOME/.bashrc
+then
+    echo "Não foi possível configurar o Android Studio"
+    exit 1
+fi
+
+echo "Configuração do Android Studio"
+if !  ~/Android/Sdk/tools/bin/sdkmanager "platform-tools" "platforms;android-27" "build-tools;27.0.3"
+then
+    echo "Não foi possível configurar o Android Studio"
+    exit 1
+fi
 echo "Configuração feita com sucesso"
