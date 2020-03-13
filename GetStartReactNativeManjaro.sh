@@ -31,14 +31,6 @@ then
     exit 1
 fi
 
-echo "Configurações do React Native"
-if ! sudo npm install -g npx
-then
-    echo "Não foi possível configurar o React Native"
-    exit 1
-fi
-echo "Configuração feita com sucesso"
-
 echo "Configuração do Android Studio"
 if ! echo 'export ANDROID_HOME=$HOME/Android/Sdk
     export PATH=$PATH:$ANDROID_HOME/emulator
