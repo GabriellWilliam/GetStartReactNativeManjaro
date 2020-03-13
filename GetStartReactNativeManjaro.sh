@@ -32,13 +32,6 @@ then
 fi
 
 echo "Configurações do React Native"
-if ! sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
-then
-    echo "Não foi possível configurar o React Native"
-    exit 1
-fi
-
-echo "Configurações do React Native"
 if ! sudo npm install -g npx
 then
     echo "Não foi possível configurar o React Native"
@@ -59,10 +52,4 @@ then
     exit 1
 fi
 
-echo "Configuração do Android Studio"
-if !  ~/Android/Sdk/tools/bin/sdkmanager "platform-tools" "platforms;android-27" "build-tools;27.0.3"
-then
-    echo "Não foi possível configurar o Android Studio"
-    exit 1
-fi
 echo "Configuração feita com sucesso"
